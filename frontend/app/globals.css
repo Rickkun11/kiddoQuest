@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+} */
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color:black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a::after {
+    content: "";
+}
+
+a:hover::after {
+    display: block;
+    border: 1px solid white;
+    animation: under-line .5s ease-in-out 1;
+}
+
+@keyframes under-line {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
